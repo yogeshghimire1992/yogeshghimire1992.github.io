@@ -13,21 +13,119 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "StockIn",
+    title: "RSA Public-Key Encryption and Signature Lab",
     image: stockin as ImageMetadata,
-    link: "https://github.com/gothsec/stockin-demo",
-    preview: "https://stockin-demo.vercel.app",
-    status: "In Development",
+    link: "https://github.com/yogeshghimire1992/",
+    preview: "https://cyberalertnepal.com",
+    status: "April 2023 | Group Major Project",
   },
   {
-    title: "Svgl.app",
+    title: "Big Data Analytics with Machine Learning Projec",
     image: svgl as ImageMetadata,
-    link: "https://github.com/pheralb/svgl",
-    preview: "https://svgl.app",
-    status: "Contributor",
+    link: "https://github.com/yogeshghimire1992/",
+    preview: "https://cyberalertnepal.com",
+    status: "May 2023 | Individual",
   },
 ];
+
+const experience = [
+  {
+    title: "DigitalForensic UK | CyberAlert Nepal",
+    preview: "https://cyberalertnepal.com",
+    status: "CEO",
+    desc: ["Proficient in identifying web application vulnerabilities and using tools like Burp Suite, OWASP ZAP, and Metasploit."," Known for reliability, communication, and adaptability, I bring a critical eye to IT challenges."],
+  },
+  {
+    title: "Cyber Resilience Centre for London, UK",
+    preview: "https://cyberresiliencecentre.com",
+    status: "Cyber Outreach Officer",
+    desc: ["Drive cybersecurity awareness through targeted visits to SMEs, leveraging comprehensive security assessments to provide tailored insights and recommendations."," Organize impactful community outreach events centered on cybersecurity education, utilizing software tools for engaging presentations and interactive workshops Conduct over 100 comprehensive cyber risk assessments for businesses, employing software tools to analyze vulnerabilities and deliver actionable recommendations."," Collaborate effectively with Customer Relationship Managers and law enforcement agencies like the Met Police, utilizing software platforms for sharing threat intelligence and coordinating response efforts."],
+  },
+  {
+    title: "University of Roehampton, UK, Wandsworth | IT Security",
+    preview: "https://roehampton.ac.uk",
+    status: "IT Security",
+    desc : ["Monitor and analyze firewall, IDS/IPS alerts to detect and respond to security incidents."," Conduct risk assessments to prioritize vulnerabilities based on their impact and likelihood of exploitation. Document all security-related incidents, logs and provide reports to library management team"],
+  },
+  {
+    title: "Halesi Tuwachung Municipality Office, Nepal | IT & Data Security Officer",
+    preview: "https://halesituwachung.gov.np",
+    status: "IT & Data Security Officer",
+    desc: ["Audit cloud environments (AWS, Azure, GCP) for security best practices and compliance with regulatory standards (PCI-DSS, GDPR, HIPAA)."," Prepare detailed penetration testing reports documenting findings, risks, and remediation recommendations."," Configure and secure web servers (Apache, Nginx) and implement SSL/TLS certificates. "," Participate in incident response and digital forensics activities, ensuring timely containment and recovery measures."],
+  },
+  {
+    title: "Nepal Telecom Authority | Data & Information Security Officer",
+    preview: "https://nta.gov.np",
+    status: "Data & Information Security Officer",
+    desc: ["Perform penetration testing on network infrastructure, identifying vulnerabilities in TCP/IP, DNS, HTTP/HTTPS, and SSL/TLS.","Review source code for security flaws and provide recommendations for secure coding practices using tools such as SonarQube."," Evaluate and recommend security enhancements for web technologies (HTML5, CSS3, JavaScript frameworks) to mitigate client-side vulnerabilities."," Conduct risk assessments to prioritize vulnerabilities based on their impact and likelihood of exploitation. Apply mobile application security testing techniques, addressing vulnerabilities from the OWASP Mobile Top 10."],
+  },
+]
 ---
+<section id="experience" class="py-12 border-t border-[#ffffff10] text-[var(--white)]">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">My work</h2>
+    <h3 class="text-4xl md:text-5xl font-medium mb-8">Experience</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {
+        experience.map((project) => (
+          <div class="group">
+            <a
+              href={project.preview}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block"
+            >
+              <div class="flex items-center px-3">
+                <div class="flex-grow">
+                  <h4 class="text-2xl font-semibold">{project.title}</h4>
+                  <span class="py-1 text-sm text-[var(--white-icon)]">
+                    {project.status}
+                  </span>
+                  <ul class="space-y-2 text-[var(--white-icon)] text-sm">
+                  {project.desc.map((item, index) => (
+                    <div class="flex items-center">
+                      <span class="pl-1">•</span>
+                      <li class="pl-3">{item}</li>
+                    </div>
+                  ))}
+                  </ul>
+                </div>
+                <div class="flex gap-2 ml-auto">
+                  {/* <a 
+                    target="_blank" 
+                    href="https://cyberalertnepal.com"
+                    aria-label="GitHub" 
+                    class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+                  >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-6 h-6 text-[var(--white)] transform transition-transform flex-shrink-0"
+                  >
+                    <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
+                  </svg>
+                  </a> */}
+                  <a 
+                    target="_blank" 
+                    href={project.preview} 
+                    aria-label="Preview" 
+                    class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7">
+                      <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
 
 <section id="projects" class="py-12 border-t border-[#ffffff10] text-[var(--white)]">
   <div class="max-w-5xl mx-auto">
@@ -88,7 +186,7 @@ const projects: Project[] = [
     </div>
     <a
       target="_blank"
-      href="https://github.com/Gothsec?tab=repositories"
+      href="https://github.com/yogeshghimire1992/"
       aria-label="GitHub"
       class="w-full flex items-center justify-center gap-2 mt-9 text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-[var(--white-icon-tr)] p-3 rounded-full bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
     >
